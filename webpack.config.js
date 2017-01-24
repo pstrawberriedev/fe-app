@@ -7,15 +7,16 @@ const extractLESS = new ExtractTextPlugin(
   { disabled:false, allChunks: true }
 );
 
-// Webpack Config
+// Webpack Production Config
 module.exports = {
 
-  devtool: 'source-map',
+  //devtool: 'source-map',
 
-  context: path.join(__dirname, 'dist'), // copy files
+  context: path.join(__dirname, 'dist'), // copy-webpack-plugin output path
   entry: [
-    path.join(__dirname, "src/scripts/index.js"), //app js -> js
-    path.join(__dirname, "src/styles/index.js") //app less -> css
+    path.join(__dirname, "src/app.js"), // react,cjs -> js
+    path.join(__dirname, "src/styles/index.js"), // less -> css
+    path.join(__dirname, "src/images/index.js") // images -> images++
   ],
 
   output: {
@@ -26,7 +27,11 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.less$/,  exclude: /node_modules/, loader: extractLESS.extract(['css','less']) },
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader', query: {presets: ['es2015']} }
+      { test: /\.(js|jsx)$/i, exclude: /node_modules/, loader: 'babel-loader', query: {presets: ['es2015', 'react']} },
+      { test: /.*\.(gif|png|jpe?g|svg)$/i, loaders: [
+        'file?name=images/[name].[ext]',
+        'image-webpack?{optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}, mozjpeg: {quality: 65}}'
+      ]}
     ]
   },
 
@@ -34,13 +39,15 @@ module.exports = {
     extractLESS,
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': { NODE_ENV: JSON.stringify('production') }
+    }),
     new webpack.optimize.UglifyJsPlugin({
       comments: false,
       compress: { warnings: false }
     }),
     new CopyWebpackPlugin([
-      { from: path.join(__dirname, "src/index.html") },
-      { from: path.join(__dirname, "src/images"), to: path.join(__dirname, "dist/images") }
+      {from: path.join(__dirname, "src/index.html")}
     ])
   ]
 
