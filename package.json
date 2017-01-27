@@ -4,7 +4,7 @@
   "description": "Front-end App using webpack!",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --progress --colors --watch",
+    "start": "node ./bin/dev --colors",
     "build": "webpack --progress --colors"
   },
   "repository": {
@@ -25,6 +25,7 @@
     "babel-preset-react": "^6.22.0",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.1",
+    "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "gsap": "^1.19.1",
     "image-webpack-loader": "^3.1.0",
@@ -35,6 +36,7 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.9.0",
     "wetfish-basic": "^0.7.11"
   }
 }

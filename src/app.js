@@ -4,8 +4,14 @@
 //import TweenMax from "gsap";
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './styles/base.less';
+import Nav from './components/Nav';
+
 
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
-  document.getElementById('root')
+  <div>
+    <Nav />
+    <h1>Hello, werlbzs!</h1>
+  </div>,
+  document.getElementById('mount')
 );
