@@ -4,7 +4,6 @@
 //import TweenMax from "gsap";
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/base.less';
 import Nav from './components/Nav';
 
 

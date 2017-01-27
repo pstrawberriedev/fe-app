@@ -15,7 +15,7 @@ module.exports = {
   context: path.join(__dirname, ''), // copy-webpack-plugin output path
   entry: [
     path.join(__dirname, "src/app.js"), // react,cjs -> js
-    //path.join(__dirname, "src/styles/index.js"), // less -> css
+    path.join(__dirname, "src/styles/index.js"), // less -> css
     path.join(__dirname, "src/images/index.js") // images -> images++
   ],
 
