@@ -47,7 +47,8 @@ module.exports = {
       compress: { warnings: false }
     }),
     new CopyWebpackPlugin([
-      {from: path.join(__dirname, "src/index.html")}
+      {from: path.join(__dirname, "src/index.html")},
+      {from: path.join(__dirname, "src/data"), to: 'data'}
     ])
   ]
 

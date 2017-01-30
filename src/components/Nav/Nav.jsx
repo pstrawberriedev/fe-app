@@ -1,11 +1,7 @@
 import React from 'react';
 
-const Nav = React.createClass({
+export default class Nav extends React.Component {
   render() {
-    return (
-      <nav>Navigation</nav>
-    );
+    return <nav>Navigation</nav>;
   }
-});
-
-export default Nav;
+}

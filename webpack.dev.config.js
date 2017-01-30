@@ -41,7 +41,8 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new CopyWebpackPlugin([
-      {from: path.join(__dirname, "src/index.html")}
+      {from: path.join(__dirname, "src/index.html")},
+      {from: path.join(__dirname, "src/data"), to: 'data'}
     ])
   ]
 
