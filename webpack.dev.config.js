@@ -29,6 +29,7 @@ module.exports = {
     loaders: [
       { test: /\.less$/,  exclude: /node_modules/, loader: extractLESS.extract(['css','less']) },
       { test: /\.(js|jsx)$/i, exclude: /node_modules/, loader: 'babel-loader', query: {presets: ['es2015', 'react']} },
+      { test: /\.json$/, loader: 'json-loader' },
       { test: /.*\.(gif|png|jpe?g|svg)$/i, loaders: [
         'file?name=images/[name].[ext]',
         'image-webpack'
