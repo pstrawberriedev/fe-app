@@ -4,13 +4,12 @@
 //import TweenMax from "gsap";
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Nav from './components/Nav/Nav.jsx';
+import Home from './scenes/Home';
 
 
 ReactDOM.render(
   <div>
-    <Nav />
-    <h1>Hello, werlbzs!</h1>
+    <Home />
   </div>,
   document.getElementById('mount')
 );

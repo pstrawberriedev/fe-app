@@ -29,6 +29,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "gsap": "^1.19.1",
     "image-webpack-loader": "^3.1.0",
+    "jquery": "^3.1.1",
     "json-loader": "^0.5.4",
     "less": "^2.7.2",
     "less-loader": "^2.2.3",
@@ -37,7 +38,6 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "webpack": "^1.14.0",
-    "webpack-dev-middleware": "^1.9.0",
-    "wetfish-basic": "^0.7.11"
+    "webpack-dev-middleware": "^1.9.0"
   }
 }
