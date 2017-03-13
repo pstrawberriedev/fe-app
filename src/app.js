@@ -1,15 +1,8 @@
-//import $ from 'wetfish-basic';
-//import moment from 'moment';
-//import _ from 'lodash';
-//import TweenMax from "gsap";
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Home from './scenes/Home';
-
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './components/App'
 
 ReactDOM.render(
-  <div>
-    <Home />
-  </div>,
+  <App />,
   document.getElementById('mount')
-);
+)

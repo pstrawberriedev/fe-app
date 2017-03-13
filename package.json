@@ -4,7 +4,7 @@
   "description": "Front-end App using webpack!",
   "main": "index.js",
   "scripts": {
-    "start": "node ./bin/dev --colors",
+    "start": "nodemon ./bin/dev --colors",
     "build": "webpack --progress --colors"
   },
   "repository": {
@@ -27,9 +27,6 @@
     "css-loader": "^0.26.1",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
-    "gsap": "^1.19.1",
-    "image-webpack-loader": "^3.1.0",
-    "jquery": "^3.1.1",
     "json-loader": "^0.5.4",
     "less": "^2.7.2",
     "less-loader": "^2.2.3",

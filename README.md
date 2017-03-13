@@ -1,21 +1,23 @@
 # fe-app
-Front-end JS App via Webpack Boilerplate
+Boilerplate for a React-ready, front-end JS App via Webpack; intentionally "minimal".  
+Served via Express, Webpack dev build handled by webpack-dev-middleware.  
 
 ### The skinny
 
 **Styles**  
-Includes a CSS reset that includes ``box-sizing:border-box``. No grid/bootstrap; no autoprefixer.
+Opinionated styles using LESS with webpack-extract-text.  
+Includes a CSS reset with ``box-sizing:border-box``. No grid/bootstrap; no autoprefixer.
 
-**Scripts**  
-Includes lodash, moment, gsap, and wetfish-basic (in place of jquery).
+**Utility Libraries**  
+Includes lodash & moment
 
 **Flow**  
 - develop in ``/src``
-- JS entry: ``/src/scripts/index.js``
-- LESS entry: ``/src/styles/index.js``
-- HTML ``/src/index.html`` is copied to ``/dist/index.html``
-- Images ``/src/images`` is copied to ``/dist/images``
-- ``npm start`` runs a webpack watch
-- ``npm run build`` builds into ``/dist``
+- JS entry: ``/src/app.js``
+- LESS webpack entry: ``/src/styles/index.js``
+- HTML: ``/src/index.html``
+- Images: ``/src/images``
+- ``npm start`` for development
+- ``npm run build`` to build into ``/dist``
 
 ~ gfhl

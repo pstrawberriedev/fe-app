@@ -28,11 +28,7 @@ module.exports = {
     loaders: [
       { test: /\.less$/,  exclude: /node_modules/, loader: extractLESS.extract(['css','less']) },
       { test: /\.(js|jsx)$/i, exclude: /node_modules/, loader: 'babel-loader', query: {presets: ['es2015', 'react']} },
-      { test: /\.json$/, loader: 'json-loader' },
-      { test: /.*\.(gif|png|jpe?g|svg)$/i, loaders: [
-        'file?name=images/[name].[ext]',
-        'image-webpack'
-      ]}
+      { test: /\.json$/, loader: 'json-loader' }
     ]
   },
 
@@ -42,7 +38,8 @@ module.exports = {
     new webpack.NoErrorsPlugin(),
     new CopyWebpackPlugin([
       {from: path.join(__dirname, "src/index.html")},
-      {from: path.join(__dirname, "src/data"), to: 'data'}
+      {from: path.join(__dirname, "src/data"), to: 'data'},
+      {from: path.join(__dirname, "src/images"), to: 'images'}
     ])
   ]
 

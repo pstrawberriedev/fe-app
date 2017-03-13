@@ -1,7 +1,28 @@
-nav {
-  .block;.fixed;top:0;left:0;right:0;
+nav, footer {
+  .wrap { .contained; }
+  .block;.relative;top:0;left:0;right:0;
+  .font-bold;
   width:100%;
-  height:50px;
-  padding:15px;
-  text-align:center;
+
+  a {
+    .inline-block;
+    padding:15px;
+  }
+  span.padded {
+    .inline-block;
+    padding:15px;
+  }
+  a:first-child, span.padded:first-child {
+    padding-left:0;
+  }
+}
+
+nav {
+  font-size:1rem;
+  margin-bottom:1rem;
+}
+
+footer {
+  .font-body;
+  font-size:.9rem;
 }
